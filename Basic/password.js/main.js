@@ -1,4 +1,5 @@
 function tryTime(c) {
+    //This func give time or times based on number of try
     let txt = ["time", "times"];
     if (count == 1) {
         return txt[0];
@@ -9,6 +10,10 @@ function tryTime(c) {
 }
 
 function remainTime(c, t) {
+    /*
+    This func give time or times based on number of remain
+    Lock account when count meet tryLimit
+    */
     let txt = ["time", "times"]
     if (c < t) {
         if (c == t - 1) {
@@ -24,12 +29,13 @@ function remainTime(c, t) {
 }
 
 function passwordInput() {
+    //This func return password input
     return prompt("Enter password");
 }
 
 const password = "Matkhau"
 var enterPassword = passwordInput();
-const tryLimit = 10;
+const tryLimit = 10; //Limit try time
 var count = 0;
 
 while (true) {
